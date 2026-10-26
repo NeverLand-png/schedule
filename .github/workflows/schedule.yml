@@ -1,0 +1,31 @@
+name: schedule
+on:
+  schedule:
+    - cron: "*/20 * * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tesseract-ocr tesseract-ocr-rus
+          pip install opencv-python-headless pytesseract numpy
+      - name: Run
+        run: python schedule_widget.py
+        env:
+          TZ_NAME: Europe/Moscow
+      - name: Save result
+        run: |
+          git config user.name "schedule-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add schedule.txt schedule.json
+          git diff --cached --quiet || (git commit -m "update schedule" && git push)
+          
