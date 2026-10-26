@@ -14,15 +14,19 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install
-        run: pip install pdfplumber
+        run: |
+          sudo apt-get install -y fonts-dejavu-core || true
+          pip install pdfplumber pillow
       - name: Run
-        run: python schedule_pdf.py
+        run: |
+          python schedule_pdf.py
+          python make_image.py
         env:
           TZ_NAME: Europe/Moscow
       - name: Save result
         run: |
           git config user.name "schedule-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add schedule.txt schedule.json debug.txt
+          git add schedule.txt schedule.json debug.txt schedule.png
           git diff --cached --quiet || (git commit -m "update schedule" && git push)
           
