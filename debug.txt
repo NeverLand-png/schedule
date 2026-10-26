@@ -1,21 +1,8 @@
-{'size': '566x800', 'vlines': 0, 'date': 'None'}
-{'size': '566x800', 'vlines': 0, 'date': 'None'}
-{'size': '566x800', 'vlines': 0, 'date': 'None'}
-{'size': '566x800', 'vlines': 12, 'date': 'None'}
-{'size': '566x800', 'vlines': 12, 'date': 'None'}
-{'size': '566x800', 'vlines': 2, 'date': 'None'}
-{'size': '566x800', 'vlines': 3, 'date': '2026-10-27', 'row_y': [881, 930], 'fallback': True}
-{'size': '566x800', 'vlines': 0, 'date': 'None'}
-{'size': '566x800', 'vlines': 0, 'date': 'None'}
-{'size': '566x800', 'vlines': 0, 'date': 'None'}
-{'size': '566x800', 'vlines': 12, 'date': 'None'}
-{'size': '566x800', 'vlines': 12, 'date': 'None', 'row_y': [1054, 1082], 'cells': ['1-1: ', '2-2: ', '3-3: ', '4-4: ', '5-5: ', '6-6: ', '7-7: 1', '8-8: ', '9-9: ', '10-10: ']}
-{'size': '566x800', 'vlines': 2, 'date': '2026-10-26'}
-{'size': '566x800', 'vlines': 8, 'date': '2026-10-27', 'row_y': [880, 910], 'fallback': True}
-{'size': '566x800', 'vlines': 0, 'date': 'None'}
-{'size': '566x800', 'vlines': 0, 'date': 'None'}
-{'size': '566x800', 'vlines': 0, 'date': 'None'}
-{'size': '566x800', 'vlines': 12, 'date': 'None'}
-{'size': '566x800', 'vlines': 12, 'date': 'None'}
-{'size': '566x800', 'vlines': 2, 'date': 'None'}
-{'size': '566x800', 'vlines': 2, 'date': '2026-10-23'}
+{'page': 1, 'date': '2026-10-27', 'row': 'МДК 0401/- | 11/2к-- | МДК 0401 | 11/2к | 0401/0401 | 3/3к | ин.яз | 21/25'}
+{'page': 2, 'date': '2026-10-26', 'row': 'кл.час | МДК 0401 | 11/2к | МДК 0401 | 11/2к | МДК 0301 | 9/3к | МДК 0301 | 9/3к'}
+{'page': 3, 'date': 'None'}
+{'page': 4, 'date': 'None'}
+{'page': 5, 'date': 'None'}
+{'page': 6, 'date': 'None'}
+{'page': 7, 'date': 'None'}
+{'page': 8, 'date': 'None'}
