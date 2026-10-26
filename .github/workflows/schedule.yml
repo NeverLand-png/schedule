@@ -18,14 +18,17 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y tesseract-ocr tesseract-ocr-rus
           pip install opencv-python-headless pytesseract numpy
+          mkdir -p "$RUNNER_TEMP/tessdata"
+          wget -q https://github.com/tesseract-ocr/tessdata_best/raw/main/rus.traineddata -O "$RUNNER_TEMP/tessdata/rus.traineddata" && wget -q https://github.com/tesseract-ocr/tessdata_best/raw/main/eng.traineddata -O "$RUNNER_TEMP/tessdata/eng.traineddata" && echo "TESSDATA_PREFIX=$RUNNER_TEMP/tessdata" >> "$GITHUB_ENV" || echo "точные модели не скачались, берём обычные"
       - name: Run
-        run: python schedule_widget.py
+        run: python schedule_widget_v2.py
         env:
           TZ_NAME: Europe/Moscow
       - name: Save result
         run: |
           git config user.name "schedule-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add schedule.txt schedule.json
+          git add schedule.txt schedule.json debug.txt
+          git add debug_page.jpg 2>/dev/null || true
           git diff --cached --quiet || (git commit -m "update schedule" && git push)
           
